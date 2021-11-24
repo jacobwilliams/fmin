@@ -21,7 +21,7 @@ fpm test --profile release
 
 ### See also
 
-  * Richard Brent, "Algorithms for Minimization Without Derivatives",
+  * Richard Brent, "[Algorithms for Minimization Without Derivatives](https://maths-people.anu.edu.au/~brent/pub/pub011.html)",
     Prentice - Hall, Inc. (1973)
   * [fmin from Netlib](http://www.netlib.org/fmm/fmin.f)
   * [roots-fortran](https://github.com/jacobwilliams/roots-fortran) (1D derivative-free roots solvers)
