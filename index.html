@@ -144,6 +144,44 @@
 fpm test --profile release
 </code></pre></div>
 
+<h3>Example</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">program </span><span class="n">test</span>
+
+<span class="k">use </span><span class="n">fmin_module</span>
+<span class="k">use </span><span class="n">iso_fortran_env</span><span class="p">,</span> <span class="k">only</span><span class="p">:</span> <span class="n">wp</span> <span class="o">=&gt;</span> <span class="n">real64</span> <span class="c">! double precision</span>
+
+<span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ax</span><span class="p">,</span> <span class="n">bx</span><span class="p">,</span> <span class="n">xmin</span><span class="p">,</span> <span class="n">xerr</span>
+
+<span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">ax</span>  <span class="o">=</span> <span class="o">-</span><span class="mf">4.0_wp</span>       <span class="c">! lower bound</span>
+<span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">bx</span>  <span class="o">=</span> <span class="mf">0.0_wp</span>        <span class="c">! upper bound</span>
+<span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">tol</span> <span class="o">=</span> <span class="mf">1.0e-8_wp</span>     <span class="c">! tolerance</span>
+<span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">pi</span>  <span class="o">=</span> <span class="nb">acos</span><span class="p">(</span><span class="o">-</span><span class="mf">1.0_wp</span><span class="p">)</span> <span class="c">! pi</span>
+<span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">parameter</span> <span class="kd">::</span> <span class="n">x</span>  <span class="o">=</span> <span class="o">-</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.0_wp</span>     <span class="c">! true answer</span>
+
+<span class="n">xmin</span> <span class="o">=</span> <span class="n">fmin</span><span class="p">(</span><span class="n">func</span><span class="p">,</span><span class="n">ax</span><span class="p">,</span><span class="n">bx</span><span class="p">,</span><span class="n">tol</span><span class="p">)</span> <span class="c">! compute the minimum</span>
+
+<span class="n">xerr</span> <span class="o">=</span> <span class="n">xmin</span> <span class="o">-</span> <span class="n">x</span>  <span class="c">! difference from true value</span>
+
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;xmin       = &#39;</span><span class="p">,</span> <span class="n">xmin</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;xmin exact = &#39;</span><span class="p">,</span> <span class="n">x</span>
+<span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span> <span class="s1">&#39;xmin error = &#39;</span><span class="p">,</span> <span class="n">xerr</span>
+
+<span class="k">contains</span>
+
+<span class="k">    function </span><span class="n">func</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">result</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+
+    <span class="k">implicit none</span>
+
+<span class="k">    </span><span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x</span>  <span class="c">!! indep. variable</span>
+    <span class="kt">real</span><span class="p">(</span><span class="n">wp</span><span class="p">)</span>            <span class="kd">::</span> <span class="n">f</span>  <span class="c">!! function value `f(x)`</span>
+
+    <span class="n">f</span> <span class="o">=</span> <span class="nb">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+    <span class="k">end function </span><span class="n">func</span>
+
+<span class="k">end program </span><span class="n">test</span>
+</code></pre></div>
+
 <h3>Documentation</h3>
 <ul>
 <li>The API documentation for the current <code>master</code> branch can be found <a href="https://jacobwilliams.github.io/fmin/">here</a>.  This is generated by processing the source files with <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>.</li>
