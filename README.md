@@ -19,7 +19,7 @@ program test
 use fmin_module
 use iso_fortran_env, only: wp => real64 ! double precision
 
-real(wp) :: ax, bx, xmin, xerr
+real(wp) :: xmin, xerr
 
 real(wp),parameter :: ax  = -4.0_wp       ! lower bound
 real(wp),parameter :: bx  = 0.0_wp        ! upper bound
