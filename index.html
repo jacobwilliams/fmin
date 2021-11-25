@@ -143,6 +143,11 @@
 fpm test --profile release
 </code></pre></div>
 
+<p>To use <code>fmin</code> within your fpm project, add the following to your <code>fpm.toml</code> file:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">[dependencies]</span>
+<span class="n">fortran-csv-module</span> <span class="o">=</span> <span class="p">{</span> <span class="n">git</span><span class="o">=</span><span class="s">&quot;https://github.com/jacobwilliams/fmin.git&quot;</span> <span class="p">}</span>
+</code></pre></div>
+
 <h3>Example</h3>
 <div class="codehilite"><pre><span></span><code><span class="k">program </span><span class="n">test</span>
 
