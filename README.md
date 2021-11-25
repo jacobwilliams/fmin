@@ -1,3 +1,6 @@
+![stl-fortran](media/logo.png)
+============
+
 Derivative free 1D function minimizer in modern Fortran
 
 ![Build Status](https://github.com/jacobwilliams/fmin/actions/workflows/CI.yml/badge.svg)
