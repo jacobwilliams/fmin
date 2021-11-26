@@ -17,7 +17,7 @@ fpm test --profile release
 To use `fmin` within your fpm project, add the following to your `fpm.toml` file:
 ```toml
 [dependencies]
-fortran-csv-module = { git="https://github.com/jacobwilliams/fmin.git" }
+fmin = { git="https://github.com/jacobwilliams/fmin.git" }
 ```
 
 ### Example
