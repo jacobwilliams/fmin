@@ -4,9 +4,7 @@
 
     program test
 
-    use fmin_module
-    use iso_fortran_env, only: wp => real64 ! double precision
-
+    use fmin_module,  wp => fmin_rk
 
     real(wp) :: ax, bx, xmin, xerr, x
 
