@@ -3,7 +3,12 @@
 
 Derivative free 1D function minimizer in modern Fortran
 
-![Build Status](https://github.com/jacobwilliams/fmin/actions/workflows/CI.yml/badge.svg)
+### Status
+
+[![GitHub release](https://img.shields.io/github/release/jacobwilliams/fmin.svg)](https://github.com/jacobwilliams/fmin/releases/latest)
+[![Build Status](https://github.com/jacobwilliams/fmin/actions/workflows/CI.yml/badge.svg)](https://github.com/jacobwilliams/fmin/actions)
+[![codecov](https://codecov.io/gh/jacobwilliams/fmin/branch/master/graph/badge.svg)](https://codecov.io/gh/jacobwilliams/fmin)
+[![last-commit](https://img.shields.io/github/last-commit/jacobwilliams/fmin)](https://github.com/jacobwilliams/fmin/commits/master)
 
 ### Compiling
 
