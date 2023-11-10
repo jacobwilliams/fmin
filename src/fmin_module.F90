@@ -96,7 +96,6 @@
 
     real(wp) :: a,b,d,e,xm,p,q,r,tol1,tol2,u,v,w
     real(wp) :: fu,fv,fw,fx,x
-    real(wp) :: abs,sqrt,sign
 
     real(wp),parameter :: c = (3.0_wp-sqrt(5.0_wp))/2.0_wp  !! squared inverse of golden ratio
     real(wp),parameter :: half = 0.5_wp
