@@ -4,7 +4,7 @@
 
     program test
 
-    use fmin_module,  wp => fmin_rk
+    use fmin_module,  only: wp => fmin_rk, fmin
 
     real(wp) :: ax, bx, xmin, xerr, x
 
