@@ -5,6 +5,7 @@ Derivative free 1D function minimizer in modern Fortran
 
 ### Status
 
+[![Language](https://img.shields.io/badge/-Fortran-734f96?logo=fortran&logoColor=white)](https://github.com/topics/fortran)
 [![GitHub release](https://img.shields.io/github/release/jacobwilliams/fmin.svg)](https://github.com/jacobwilliams/fmin/releases/latest)
 [![Build Status](https://github.com/jacobwilliams/fmin/actions/workflows/CI.yml/badge.svg)](https://github.com/jacobwilliams/fmin/actions)
 [![codecov](https://codecov.io/gh/jacobwilliams/fmin/branch/master/graph/badge.svg)](https://codecov.io/gh/jacobwilliams/fmin)
