@@ -1,16 +1,15 @@
 name = "fmin"
 author = "Jacob Williams"
-copyright  = "Copyright (c) 2021-2022, Jacob Williams"
+copyright  = "Copyright (c) 2021-2026, Jacob Williams"
 license = "BSD-3"
 description = "Derivative free 1D function minimizer in modern Fortran"
 homepage = "https://github.com/jacobwilliams/fmin"
 keywords = ["minimization"]
 
 [build]
-auto-executables = false
-auto-examples = false
+auto-executables = true
+auto-examples = true
 auto-tests = true
-link = ["lapack", "blas"]
 
 [library]
 source-dir = "src"
